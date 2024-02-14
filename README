@@ -1,0 +1,9 @@
+
+
+8x8 BLIS-style AVX sgemm
+
+compile either with flag:
+$ g++ sgemm.cc -O3 -march=native
+
+or :
+$ g++ sgemm.cc -O3 -mavx
