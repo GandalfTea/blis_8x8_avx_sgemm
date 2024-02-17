@@ -7,3 +7,6 @@ $ g++ sgemm.cc -O3 -march=native
 
 or :
 $ g++ sgemm.cc -O3 -mavx
+
+compiled with gcc 11.4 on ubuntu
+on my ryzen 9 3900x, 1000 run average sits at ~400 GFLOPS
