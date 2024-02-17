@@ -1,12 +1,11 @@
 
 
-8x8 BLIS-style AVX sgemm
+8x8 BLIS-style AVX sgemm kernel
 
-compile either with flag:
-$ g++ sgemm.cc -O3 -march=native
+compile either with -march=native or -mavx for AVX256 
+for multithreading, use -fopenmp
 
-or :
-$ g++ sgemm.cc -O3 -mavx
+$ g++ sgemm.cc -O3 -march=native -fopenmp
 
-compiled with gcc 11.4 on ubuntu
-on my ryzen 9 3900x, 1000 run average sits at ~400 GFLOPS
+compiled with gcc 11.4 on ubuntu 22.04.3 with a ryzen 9 3900x, 
+N=1024 12 threads 128x128 block 1000 run average sits at ~400 GFLOPS
